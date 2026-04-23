@@ -8,9 +8,9 @@ const Header = () => {
       <ul className="flex gap-8">
         {navLinks.map((link) => (
           <li key={link.href} className="py-1 px-3">
-            <Link href={link.href} className="uppercase text-sm font-bold">
+            <a href={link.href} className="uppercase text-sm font-bold">
               {link.title}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
