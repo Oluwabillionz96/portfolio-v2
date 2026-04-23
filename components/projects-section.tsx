@@ -16,7 +16,7 @@ const ProjectsSection = () => {
         </h2>
         <Link
           href={"/archive"}
-          className="font-space text-sm lg:flex md:hidden gap-2 hover:underline decoration-2 group items-center whitespace-nowrap font-semibold"
+          className="font-space text-sm lg:flex hidden gap-2 hover:underline decoration-2 group items-center whitespace-nowrap font-semibold"
         >
           View Full Project Archive{" "}
           <ArrowUpRight className="group-hover:rotate-45 hover:translate-x-2 transition-all duration-300" />
