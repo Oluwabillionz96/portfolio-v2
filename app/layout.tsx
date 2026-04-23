@@ -35,7 +35,7 @@ export default function RootLayout({
         <Header />
         <main
           id="main-content"
-          className="md:mt-20 selection:bg-black selection:text-white max-w-[1440px] mx-auto"
+          className="md:mt-20 py-10 selection:bg-black selection:text-white max-w-[1440px] mx-auto"
         >
           {children}
         </main>

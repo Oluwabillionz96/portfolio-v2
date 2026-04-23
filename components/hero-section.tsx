@@ -2,7 +2,7 @@ import { ArrowDown, MapPin } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="md:min-h-screen  py-10 px-6 md:py-24 md:px-8 space-y-12 md:space-y-16">
+    <section className="md:min-h-screen  pt-10 px-6 md:py-24 md:px-8 space-y-12 md:space-y-16">
       <header className="space-y-4">
         <h1 className="uppercase font-bold font-space text-5xl sm:text-7xl md:text-8xl leading-tight">
           Goodluck Reuben

@@ -1,14 +1,16 @@
+import StickyContainer from "./ui/sticky-container";
+
 const AboutSection = () => {
   return (
     <section
-      className="min-h-screen flex flex-col lg:flex-row items-start lg:gap-20 py-32 px-6 lg:px-8 gap-4"
+      className="lg:min-h-screen flex flex-col lg:flex-row items-start lg:gap-20 lg:py-32 px-6 lg:px-8 gap-4"
       id="about"
     >
-      <div className="sticky top-0 md:top-20 -mx-6 w-screen bg-white/50 lg:bg-transparent px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+      <StickyContainer>
         <h2 className="uppercase text-xl sm:text-4xl lg:text-6xl font-bold font-space md:flex">
           The Philosophy
         </h2>
-      </div>
+      </StickyContainer>
 
       <section>
         <div className="text-lg md:text-xl  font-sans leading-8 space-y-4">
