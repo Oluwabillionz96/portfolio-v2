@@ -23,7 +23,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("font-sans", inter.variable, spaceGrotesk.variable)}
+      className={cn(
+        "font-sans selection:bg-black selection:text-white",
+        inter.variable,
+        spaceGrotesk.variable,
+      )}
     >
       <body>
         <a
@@ -35,7 +39,7 @@ export default function RootLayout({
         <Header />
         <main
           id="main-content"
-          className="md:mt-20 py-10 selection:bg-black selection:text-white max-w-[1440px] mx-auto"
+          className="md:mt-20 py-10  max-w-[1440px] mx-auto"
         >
           {children}
         </main>

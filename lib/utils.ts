@@ -14,7 +14,7 @@ export const navLinks = [
     title: "Projects",
     href: "#projects",
   },
-  { title: "Experience", href: "#experience" },
+  { title: "Work History", href: "#work-history" },
   {
     title: "Contact",
     href: "#contact",
