@@ -2,14 +2,16 @@ import { ArrowDown, MapPin } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen py-20 px-6 md:py-24 md:px-8 space-y-12 md:space-y-16">
+    <section className="md:min-h-screen  py-10 px-6 md:py-24 md:px-8 space-y-12 md:space-y-16">
       <header className="space-y-4">
         <h1 className="uppercase font-bold font-space text-5xl sm:text-7xl md:text-8xl leading-tight">
           Goodluck Reuben
         </h1>
         <div className="flex gap-2 items-center text-muted-foreground">
           <MapPin size={16} />
-          <p className="text-xs font-bold font-space uppercase tracking-wider">Uyo, Nigeria</p>
+          <p className="text-xs font-bold font-space uppercase tracking-wider">
+            Uyo, Nigeria
+          </p>
         </div>
       </header>
       <section className="space-y-4">
@@ -21,10 +23,10 @@ const HeroSection = () => {
           clarity.
         </h2>
       </section>
-      <div className="flex gap-4 text-lg md:text-xl font-sans items-center hover:translate-y-2 transition-transform cursor-pointer">
+      {/* <div className="flex gap-4 text-lg md:text-xl font-sans items-center hover:translate-y-2 transition-transform cursor-pointer">
         <ArrowDown className="animate-bounce" />
         <p className="font-medium">Selected Projects</p>
-      </div>
+      </div> */}
     </section>
   );
 };
