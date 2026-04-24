@@ -44,7 +44,7 @@ high-end fashion boutiques requiring extreme uptime and speed.`,
 
 export const experiences = [
   {
-    year: { from: 2025, to: new Date().getFullYear() },
+    year: { from: 2025, to: Date.now() },
     position: "Frontend Developer",
     desc: "Collaborate with a cross-functional team of developers and designers to build and maintain critical UI components used to power the Chaindustry App",
     company: {
@@ -53,7 +53,7 @@ export const experiences = [
     },
   },
   {
-    year: { from: 2025, to: new Date().getFullYear() },
+    year: { from: 2025, to: Date.now() },
     position: "Frontend Developer",
     desc: "Developing, maintaining and shipping production code for Digemart, one of Adom labs product.",
     company: {

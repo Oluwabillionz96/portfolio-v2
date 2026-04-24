@@ -10,7 +10,7 @@ const Header = () => {
           <li key={link.href}>
             <a
               href={link.href}
-              className="uppercase hover-fill-right py-2 px-3 hover:text-white text-sm font-bold"
+              className="uppercase text-black hover-fill-right py-2 px-3 hover:text-white text-sm font-bold"
             >
               {link.title}
             </a>
@@ -18,7 +18,7 @@ const Header = () => {
         ))}
       </ul>
       <Button
-        className="uppercase hover-fill-top hover:text-white bg-transparent hover:bg-transparent rounded-none border-2 border-black py-2 px-6 text-sm font-bold"
+        className="uppercase hover-fill-top text-black hover:text-white bg-transparent hover:bg-transparent rounded-none border-2 border-black py-2 px-6 text-sm font-bold"
         variant="outline"
       >
         Resume

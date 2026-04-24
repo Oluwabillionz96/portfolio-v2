@@ -29,7 +29,7 @@ export default function RootLayout({
         spaceGrotesk.variable,
       )}
     >
-      <body>
+      <body className="overflow-x-hidden" suppressHydrationWarning>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:border-2 focus:border-black focus:font-bold focus:uppercase focus:text-xs tracking-widest"

@@ -5,7 +5,7 @@ import ExperienceCard from "./experience-card";
 const WorkHistorySection = () => {
   return (
     <section
-      className="lg:min-h-screen space-y-24 px-5 lg:px-8 border-t-2 border-b-2 border-black lg:py-40"
+      className="lg:min-h-screen lg:space-y-24 space-y-4 px-5 lg:px-8 border-t-2 border-b-2 border-black lg:py-40 py-4"
       id="work-history"
     >
       <StickyContainer>
@@ -13,7 +13,7 @@ const WorkHistorySection = () => {
           Work History
         </h2>
       </StickyContainer>
-      <section className="flex flex-col">
+      <section className=" gap-6 lg:gap-0 grid md:grid-cols-2 lg:grid-cols-1">
         {experiences.map((experience, index) => (
           <ExperienceCard key={index} {...experience} />
         ))}

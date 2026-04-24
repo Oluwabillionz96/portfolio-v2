@@ -33,9 +33,7 @@ const ProjectCard = ({
             src={imageSrc}
             alt={imageAlt}
             fill
-            objectFit="cover"
-            objectPosition="top"
-            className="grayscale hover:grayscale-0 transition-all duration-300 ease-in-out scale-100 hover:scale-105"
+            className="grayscale object-cover object-top hover:grayscale-0 transition-all duration-300 ease-in-out scale-100 hover:scale-105"
           />
         </div>
         <section className="flex-col flex gap-4">
