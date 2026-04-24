@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 const WorkHistorySection = () => {
   return (
     <section
-      className="lg:min-h-screen lg:space-y-24 space-y-4 px-5 lg:px-8 border-t-2 border-b-2 border-black lg:py-40 py-4"
+      className="lg:space-y-24 space-y-4 px-5 lg:px-8 border-t-2 border-b-2 border-black lg:py-40 py-4"
       id="work-history"
     >
       <StickyContainer>

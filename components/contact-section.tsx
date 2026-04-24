@@ -36,7 +36,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="lg:min-h-screen lg:py-40 px-8 flex-col md:flex-row flex gap-14 md:gap-8"
+      className="lg:py-40 px-8 flex-col md:flex-row flex gap-14 md:gap-8"
     >
       <section className="lg:space-y-8 space-y-4 ">
         <h2 className="lg:text-6xl sm:text-4xl text-xl font-bold font-space uppercase">

@@ -3,7 +3,7 @@ import StickyContainer from "./ui/sticky-container";
 const AboutSection = () => {
   return (
     <section
-      className="lg:min-h-screen flex flex-col lg:flex-row items-start lg:gap-20 lg:py-32 px-6 lg:px-8 gap-4"
+      className="flex flex-col lg:flex-row items-start lg:gap-20 lg:py-32 px-6 lg:px-8 gap-4"
       id="about"
     >
       <StickyContainer>

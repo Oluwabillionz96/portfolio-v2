@@ -7,7 +7,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 const ProjectsSection = () => {
   return (
     <section
-      className="lg:min-h-screen border-t-2 border-black lg:py-32 px-5 lg:px-7"
+      className="border-t-2 border-black lg:py-32 px-5 lg:px-7"
       id="projects"
     >
       <StickyContainer className="lg:pb-12 lg:border-b-2 lg:border-black flex justify-between items-center">
