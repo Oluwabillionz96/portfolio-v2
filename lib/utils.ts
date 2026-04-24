@@ -41,3 +41,24 @@ high-end fashion boutiques requiring extreme uptime and speed.`,
     projectLink: "#",
   },
 ];
+
+export const experiences = [
+  {
+    year: { from: 2025, to: new Date().getFullYear() },
+    position: "Frontend Developer",
+    desc: "Collaborate with a cross-functional team of developers and designers to build and maintain critical UI components used to power the Chaindustry App",
+    company: {
+      name: "Chaindustry",
+      websiteUrl: "https://www.chaindustry.io",
+    },
+  },
+  {
+    year: { from: 2025, to: new Date().getFullYear() },
+    position: "Frontend Developer",
+    desc: "Developing, maintaining and shipping production code for Digemart, one of Adom labs product.",
+    company: {
+      name: "Adom Labs",
+      websiteUrl: "https://adomlabs.com",
+    },
+  },
+];

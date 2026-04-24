@@ -22,11 +22,11 @@ const ProjectsSection = () => {
           <ArrowUpRight className="group-hover:rotate-45 hover:translate-x-2 transition-all duration-300" />
         </Link>
       </StickyContainer>
-      <div className="grid grid-cols-1 md:grid-cols-2 pt-8 gap-10 lg:gap-0">
+      <section className="grid grid-cols-1 md:grid-cols-2 pt-8 gap-10 lg:gap-0">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} index={index} />
         ))}
-      </div>
+      </section>
       <Link
         href={"/archive"}
         className="flex gap-1 text-sm underline decoration-2 justify-end mt-10  lg:hidden font-sans items-center"

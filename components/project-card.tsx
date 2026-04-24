@@ -21,7 +21,7 @@ const ProjectCard = ({
   index,
 }: ProjectCardProps) => {
   return (
-    <div className="relative">
+    <article className="relative">
       <div
         className={cn(
           "lg:p-16 h-145 border bg-white relative z-20 lg:z-0 lg:border-0 p-4 border-black space-y-8 lg:border-b-2",
@@ -57,7 +57,7 @@ const ProjectCard = ({
         </section>
       </div>
       <div className="border-black lg:hidden border-2 w-full h-145 absolute -top-4 -right-4" />
-    </div>
+    </article>
   );
 };
 
