@@ -2,7 +2,7 @@ import { projects } from "@/lib/utils";
 import StickyContainer from "./ui/sticky-container";
 import ProjectCard from "./project-card";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const ProjectsSection = () => {
   return (
@@ -27,6 +27,13 @@ const ProjectsSection = () => {
           <ProjectCard key={index} {...project} index={index} />
         ))}
       </div>
+      <Link
+        href={"/archive"}
+        className="flex gap-1 text-sm underline decoration-2 justify-end mt-10  lg:hidden font-sans items-center"
+      >
+        <p className="font-medium">View Full Project Archive</p>
+        <ArrowRight size={16} className="animate-shake" />
+      </Link>
     </section>
   );
 };

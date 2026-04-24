@@ -23,10 +23,6 @@ const HeroSection = () => {
           clarity.
         </h2>
       </section>
-      {/* <div className="flex gap-4 text-lg md:text-xl font-sans items-center hover:translate-y-2 transition-transform cursor-pointer">
-        <ArrowDown className="animate-bounce" />
-        <p className="font-medium">Selected Projects</p>
-      </div> */}
     </section>
   );
 };
