@@ -62,3 +62,12 @@ export const experiences = [
     },
   },
 ];
+
+export const socials = [
+  { name: "GitHub", href: "https://github.com/oluwabillionz96" },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/goodluck-reuben-45502930a",
+  },
+  {name: "Facebook", href: "https://www.facebook.com/profile.php?id=100095272218539"}
+];

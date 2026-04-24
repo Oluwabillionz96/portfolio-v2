@@ -1,5 +1,5 @@
 import { navLinks } from "@/lib/utils";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import Link from "next/link";
 
 const Header = () => {
