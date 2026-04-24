@@ -1,6 +1,8 @@
 import { experiences } from "@/lib/utils";
 import StickyContainer from "./ui/sticky-container";
 import ExperienceCard from "./experience-card";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const WorkHistorySection = () => {
   return (
@@ -18,6 +20,13 @@ const WorkHistorySection = () => {
           <ExperienceCard key={index} {...experience} />
         ))}
       </section>
+      <Link
+        href={"/archive"}
+        className="flex gap-1 text-sm underline decoration-2 justify-end mt-10  lg:hidden font-sans items-center"
+      >
+        <p className="font-medium">View Full Résumé</p>
+        <ArrowRight size={16} className="animate-shake" />
+      </Link>
     </section>
   );
 };
