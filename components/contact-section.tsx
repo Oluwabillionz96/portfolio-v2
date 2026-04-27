@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import ControlledInput from "./ui/controlled-input";
 import { Button } from "./ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Textarea } from "./ui/textarea";
 
 export const formSchema = z.object({
   fullName: z

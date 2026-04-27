@@ -2,7 +2,6 @@
 
 import { navLinks } from "@/lib/utils";
 import { Button } from "./ui/button";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
