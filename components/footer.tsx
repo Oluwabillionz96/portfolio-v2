@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="lg:py-14 md:py-10 py-6 flex-col md:flex-row px-8 border-t-2 border-black flex md:justify-between justify-center items-center gap-2 md:gap-0">
+    <footer className="lg:py-14 bg-white text-black md:py-10 py-6 flex-col md:flex-row px-8 border-t-2 border-black flex md:justify-between justify-center items-center gap-2 md:gap-0">
       <div className="flex gap-8">
         {socials.map((social) => (
           <Link

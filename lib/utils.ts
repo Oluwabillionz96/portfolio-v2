@@ -23,21 +23,23 @@ export const navLinks = [
 
 export const projects = [
   {
+    id: "photoverse",
     imageSrc:
       "https://res.cloudinary.com/dlore0dyu/image/upload/v1777298622/portfolio-photoverse_p7jj6z.png",
     imageAlt: "Desktop screenshot of Photoverse landing page",
     projectName: "Photoverse",
     projectDescription: `A photo storage app that lets you store, organize, and access your photos without relying on device storage. Built, broken, and rebuilt with real-world lessons`,
-    projectLink: "#",
+    projectLink: "/project/photoverse",
   },
   {
+    id: "chaindustry-app",
     imageSrc:
       "https://res.cloudinary.com/dlore0dyu/image/upload/v1777300524/portfoilio-chaindustry-v2_l08ev7.png",
     imageAlt: "Desktop screenshot of Chaindustry App hero section",
     projectName: "Chaindustry App",
     projectDescription: `A headless content management system specifically engineered for
 high-end fashion boutiques requiring extreme uptime and speed.`,
-    projectLink: "#",
+    projectLink: "/project/chaindustry-app",
   },
 ];
 
