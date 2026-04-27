@@ -1,8 +1,14 @@
+"use client";
+
 import { navLinks } from "@/lib/utils";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
+  if (pathname !== "/") return null;
   return (
     <header className="md:flex hidden z-50 bg-white border-b font-space justify-between py-6 px-8 fixed w-full top-0 left-0 right-0">
       <ul className="flex gap-8">

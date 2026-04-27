@@ -38,10 +38,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <Header />
-        <main
-          id="main-content"
-          className="md:mt-20 py-10  max-w-[1440px] mx-auto"
-        >
+        <main id="main-content" className=" py-10  max-w-[1440px] mx-auto">
           {children}
         </main>
         <Footer />

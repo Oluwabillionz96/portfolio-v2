@@ -6,7 +6,7 @@ import ContactSection from "@/components/contact-section";
 
 const HomePage = () => {
   return (
-    <section className="space-y-10 lg:space-y-0 md:space-y-16">
+    <section className="space-y-10 lg:space-y-0 md:space-y-16 md:pt-20">
       <HeroSection />
       <AboutSection />
       <ProjectsSection />

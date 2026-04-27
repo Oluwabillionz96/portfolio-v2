@@ -1,4 +1,4 @@
-import { ArrowDown, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 const HeroSection = () => {
   return (
