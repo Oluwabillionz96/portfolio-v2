@@ -2,8 +2,11 @@ import { projects } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink, Code2 } from "lucide-react";
 import { notFound } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import fs from "fs";
+import path from "path";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -23,11 +26,23 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const { id } = await params;
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
+
   const project = projects.find((p) => p.id === id);
 
   if (!project) {
     notFound();
+  }
+
+  // Load markdown content from file
+  let content = "";
+  try {
+    const filePath = path.join(process.cwd(), "content", "projects", `${id}.md`);
+    content = fs.readFileSync(filePath, "utf8");
+  } catch (error) {
+    console.error("Error reading project content:", error);
+    content = "Content coming soon...";
   }
 
   return (
@@ -40,13 +55,47 @@ export default async function ProjectPage({ params }: Props) {
         Back to Projects
       </Link>
 
-      <header className="space-y-6 mb-12">
-        <h1 className="text-5xl md:text-7xl font-bold font-space uppercase leading-tight">
-          {project.projectName}
-        </h1>
-        <p className="text-xl text-muted-foreground font-sans max-w-2xl leading-relaxed">
-          {project.projectDescription}
-        </p>
+      <header className="space-y-8 mb-12 w-full">
+        <div className="space-y-6">
+          <h1 className="text-5xl md:text-7xl font-bold font-space uppercase leading-tight">
+            {project.projectName}
+          </h1>
+          <p className="text-xl text-muted-foreground font-sans max-w-2xl leading-relaxed">
+            {project.projectDescription}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-4 pt-4">
+          {project.liveUrl && (
+            <Button
+              asChild
+              className="rounded-none font-space uppercase font-bold py-6 px-8 text-base border-2 border-black bg-black text-white hover:bg-white hover:text-black transition-colors"
+            >
+              <Link
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live Demo <ExternalLink className="ml-2" size={18} />
+              </Link>
+            </Button>
+          )}
+          {project.repoUrl && (
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-none font-space uppercase font-bold py-6 px-8 text-base border-2 border-black hover:bg-black hover:text-white transition-colors"
+            >
+              <Link
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source Code <Code2 className="ml-2" size={18} />
+              </Link>
+            </Button>
+          )}
+        </div>
       </header>
 
       <div className="w-full max-w-none">
@@ -59,7 +108,7 @@ export default async function ProjectPage({ params }: Props) {
                   src={src as string}
                   alt={alt || ""}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             ),
@@ -79,12 +128,10 @@ export default async function ProjectPage({ params }: Props) {
                 {children}
               </ul>
             ),
-            li: ({ children }) => (
-              <li className="pl-2">{children}</li>
-            ),
+            li: ({ children }) => <li className="pl-2">{children}</li>,
           }}
         >
-          {project.content}
+          {content}
         </ReactMarkdown>
       </div>
     </section>
