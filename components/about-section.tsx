@@ -1,3 +1,4 @@
+import Link from "next/link";
 import StickyContainer from "./ui/sticky-container";
 
 const AboutSection = () => {
@@ -13,32 +14,34 @@ const AboutSection = () => {
       </StickyContainer>
 
       <section>
-        <div className="text-lg md:text-xl  font-sans leading-8 space-y-4">
+        <div className="text-lg md:text-xl  font-sans leading-relaxed space-y-8">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-            fugit dolore, optio consectetur sed harum, quo iste voluptatum
-            dolorum aspernatur quia non vero minus dicta nulla hic eum ad?
-            Magnam nobis, quis ea nesciunt commodi odit numquam at dolor
-            quibusdam. Ea, fuga non
+            I build frontend systems that behave the way users expect them to,
+            especially under real conditions, not just in development.
           </p>
           <p>
-            exercitationem at aliquid tempore, reiciendis pariatur, accusantium
-            voluptatem esse explicabo nam eveniet velit rem nisi ipsa! Pariatur
-            velit sed excepturi fugiat minima neque aperiam vel inventore
-            voluptatem omnis maxime vero asperiores, incidunt itaque tenetur
+            I learned quickly that things rarely break in obvious ways. I ran
+            into an issue where authentication worked in development but failed
+            in production due to how cookies behave across subdomains. Fixing it
+            meant stepping back from the UI and rethinking the architecture,
+            eventually introducing a proxy layer to make the system consistent.
+            That experience shaped how I approach problems: don’t patch
+            symptoms, understand the system.
           </p>
           <p>
-            eligendi id eaque quaerat sint aspernatur, eos nam minus et. Quod
-            qui quis facere est reprehenderit harum provident dolore, illum
-            possimus porro expedita sunt natus laborum, dolorem nesciunt sint
-            voluptatem voluptatum ad tempora asperiores. Natus velit animi
-            ipsum, commodi
+            Since then, I’ve focused on building features that hold up in
+            practice, with attention to edge cases, error handling, and the
+            details that define user experience. I care about structure because
+            clear systems are easier to reason about and harder to break.
           </p>
           <p>
-            error aspernatur necessitatibus? Facilis fuga asperiores adipisci
-            omnis quod veritatis eius? Dolor, accusamus. Perspiciatis eaque
-            voluptate, quam delectus labore maiores reiciendis hic quo,
-            repudiandae fugit, voluptas alias reprehenderit enim consectetur
+            My approach is simple: keep things straightforward. Not everything
+            needs to be clever or over-engineered. The best solutions tend to be
+            the ones that work reliably without drawing attention to themselves.
+          </p>
+          <p>
+            I own features end-to-end and follow them through to completion. If
+            I say I’ll handle something, it gets done.
           </p>
         </div>
       </section>
