@@ -114,7 +114,7 @@ export default async function ProjectPage({ params }: Props) {
                   src={src as string}
                   alt={alt || ""}
                   fill
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover object-top-left transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             ),
@@ -123,6 +123,11 @@ export default async function ProjectPage({ params }: Props) {
               <h2 className="text-3xl md:text-4xl font-bold font-space uppercase mt-16 mb-8 border-b-2 border-black pb-4">
                 {children}
               </h2>
+            ),
+            h3: ({ children }) => (
+              <h3 className="text-xl md:text-2xl font-bold font-space uppercase mt-8 mb-4">
+                {children}
+              </h3>
             ),
             p: ({ children }) => (
               <p className="text-lg md:text-xl font-sans leading-relaxed mb-8">

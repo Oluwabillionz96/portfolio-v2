@@ -39,8 +39,7 @@ export const projects = [
       "https://res.cloudinary.com/dlore0dyu/image/upload/v1777300524/portfoilio-chaindustry-v2_l08ev7.png",
     imageAlt: "Desktop screenshot of Chaindustry App hero section",
     projectName: "Chaindustry App",
-    projectDescription: `A headless content management system specifically engineered for
-high-end fashion boutiques requiring extreme uptime and speed.`,
+    projectDescription: `Chaindustry is a task-to-earn platform where users complete micro-tasks and earn rewards through structured task creation, review, and delegation systems.`,
     projectLink: "/project/chaindustry-app",
     liveUrl: "https://app.chaindustry.io",
   },
