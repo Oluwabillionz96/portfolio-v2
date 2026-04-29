@@ -38,7 +38,12 @@ export default async function ProjectPage({ params }: Props) {
   // Load markdown content from file
   let content = "";
   try {
-    const filePath = path.join(process.cwd(), "content", "projects", `${id}.md`);
+    const filePath = path.join(
+      process.cwd(),
+      "content",
+      "projects",
+      `${id}.md`,
+    );
     content = fs.readFileSync(filePath, "utf8");
   } catch (error) {
     console.error("Error reading project content:", error);
@@ -76,7 +81,8 @@ export default async function ProjectPage({ params }: Props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Live Demo <ExternalLink className="ml-2" size={18} />
+                Live
+                <ExternalLink className="ml-2" size={18} />
               </Link>
             </Button>
           )}

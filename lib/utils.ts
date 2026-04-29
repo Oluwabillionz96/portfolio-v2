@@ -42,8 +42,7 @@ export const projects = [
     projectDescription: `A headless content management system specifically engineered for
 high-end fashion boutiques requiring extreme uptime and speed.`,
     projectLink: "/project/chaindustry-app",
-    liveUrl: "#",
-    repoUrl: "#",
+    liveUrl: "https://app.chaindustry.io",
   },
 ];
 
@@ -51,7 +50,7 @@ export const experiences = [
   {
     year: { from: 2025, to: Date.now() },
     position: "Frontend Developer",
-    desc: "Developing, maintaining and shipping production code for Digemart, one of Adom labs product.",
+    desc: "Working on frontend development across multiple Adom Labs products, building core layouts, pages, and reusable components. Integrating APIs and developing responsive interfaces across features, collaborating with other developers to ship and refine product experiences.",
     company: {
       name: "Adom Labs",
       websiteUrl: "https://adomlabs.com",
@@ -60,7 +59,7 @@ export const experiences = [
   {
     year: { from: 2025, to: 2026 },
     position: "Frontend Developer",
-    desc: "Collaborate with a cross-functional team of developers and designers to build and maintain critical UI components used to power the Chaindustry App",
+    desc: "Improved Chaindustry’s app UI across mobile and desktop, fixing responsiveness issues and building clean, usable interfaces used by 10K+ users. Built a delegation feature that spread out task reviews and reduced review bottlenecks, alongside shipping features like in-app academy onboarding and improving overall UX.",
     company: {
       name: "Chaindustry",
       websiteUrl: "https://www.chaindustry.io",

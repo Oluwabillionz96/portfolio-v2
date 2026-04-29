@@ -1,4 +1,3 @@
-import Link from "next/link";
 import StickyContainer from "./ui/sticky-container";
 
 const AboutSection = () => {
