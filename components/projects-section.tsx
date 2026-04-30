@@ -1,8 +1,6 @@
 import { projects } from "@/lib/utils";
 import StickyContainer from "./ui/sticky-container";
 import ProjectCard from "./project-card";
-import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const ProjectsSection = () => {
   return (

@@ -12,8 +12,60 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "GoodLuck Reuben",
-  description: "Web Developer",
+  metadataBase: new URL("https://goodluckreuben.netlify.app"),
+  title: "Goodluck Reuben",
+  description:
+    "Goodluck Reuben is a frontend developer who builds and ships production web applications.",
+  keywords: [
+    "Goodluck Reuben",
+    "Frontend Developer",
+    "Software Engineer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+  ],
+  authors: [
+    { name: "Goodluck Reuben", url: "https://github.com/oluwabillionz96" },
+  ],
+  creator: "Goodluck Reuben",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://goodluckreuben.netlify.app",
+    title: "Goodluck Reuben",
+    description:
+      "Goodluck Reuben is a frontend developer who builds and ships production web applications.",
+    siteName: "Goodluck Reuben",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dlore0dyu/image/upload/v1777564782/Gemini_Generated_Image_jcas6pjcas6pjcas_oiqk5p.png", // Replace with your actual image URL
+        width: 1200,
+        height: 630,
+        alt: "Goodluck Reuben Portfolio Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Goodluck Reuben",
+    description:
+      "Goodluck Reuben is a frontend developer who builds and ships production web applications.",
+    creator: "@gudluck_reuben",
+    images: [
+      "https://res.cloudinary.com/dlore0dyu/image/upload/v1777564782/Gemini_Generated_Image_jcas6pjcas6pjcas_oiqk5p.png",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

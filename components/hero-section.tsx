@@ -16,7 +16,7 @@ const HeroSection = () => {
       </header>
       <section className="space-y-4">
         <p className="text-xs font-bold font-space text-primary uppercase tracking-widest">
-          Fullstack Developer & Systems Architect
+          Frontend Developer & Systems Architect
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl w-full md:w-4/5 lg:w-3/5 font-bold font-space uppercase leading-tight">
           Building technical solutions with mathematical precision and artistic

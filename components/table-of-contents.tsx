@@ -27,7 +27,7 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
         });
       },
       // Root margin to trigger when the header reaches the top 20% of the screen
-      { rootMargin: "0px 0px -80% 0px" }
+      { rootMargin: "0px 0px -80% 0px" },
     );
 
     items.forEach((item) => {
@@ -51,7 +51,7 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
       window.history.pushState(null, "", `#${id}`);
       setActiveId(id);
@@ -67,28 +67,29 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
       </p>
       <div className="border-l-2 border-black/10 flex flex-col relative">
         {/* Dynamic active indicator line */}
-        <div 
+        <div
           className="absolute left-[-2px] w-[2px] bg-black transition-all duration-300"
           style={{
-            top: items.findIndex(i => i.id === activeId) > -1 
-              ? `${items.findIndex(i => i.id === activeId) * 32}px` 
-              : '0px',
-            height: '32px',
-            opacity: activeId ? 1 : 0
+            top:
+              items.findIndex((i) => i.id === activeId) > -1
+                ? `${items.findIndex((i) => i.id === activeId) * 32}px`
+                : "0px",
+            height: "32px",
+            opacity: activeId ? 1 : 0,
           }}
         />
-        
+
         {items.map((item) => (
           <a
             key={item.id}
             href={`#${item.id}`}
             onClick={(e) => handleScroll(e, item.id)}
             className={cn(
-              "block py-1.5 text-sm transition-colors duration-200 h-[32px] flex items-center",
+              "block py-1.5 text-sm transition-colors duration-200 h-[32px] ",
               item.level === 3 ? "pl-8" : "pl-4",
               activeId === item.id
                 ? "text-black font-bold"
-                : "text-muted-foreground hover:text-black hover:bg-black/5"
+                : "text-muted-foreground hover:text-black hover:bg-black/5",
             )}
           >
             <span className="line-clamp-1">{item.text}</span>

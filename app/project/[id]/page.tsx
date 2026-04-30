@@ -43,12 +43,37 @@ export async function generateMetadata({ params }: Props) {
   const { id } = await params;
   const project = projects.find((p) => p.id === id);
 
+  if (!project) {
+    return {
+      title: "Project Not Found | Goodluck Reuben",
+      description: "View my web development case studies.",
+    };
+  }
+
   return {
-    title: project
-      ? `${project.projectName} | GoodLuck Reuben`
-      : "Project Not Found",
-    description:
-      project?.projectDescription || "View my web development case studies.",
+    title: `${project.projectName} | Goodluck Reuben`,
+    description: project.projectDescription,
+    openGraph: {
+      title: `${project.projectName} | Goodluck Reuben`,
+      description: project.projectDescription,
+      url: `https://goodluckreuben.netlify.app/project/${project.id}`,
+      images: [
+        {
+          url: project.imageSrc,
+          width: 1200,
+          height: 630,
+          alt: project.imageAlt,
+        },
+      ],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.projectName} | Goodluck Reuben`,
+      description: project.projectDescription,
+      images: [project.imageSrc],
+      creator: "@gudluck_reuben",
+    },
   };
 }
 
