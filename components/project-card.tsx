@@ -46,6 +46,8 @@ const ProjectCard = ({
           <div className="flex gap-2 lg:justify-end justify-center">
             <Link
               href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex justify-center py-2 md:justify-start bg-black text-white md:bg-transparent w-full md:text-black uppercase text-sm font-bold md:w-fit font-space items-center group transition-all duration-500 hover:underline hover:decoration-black hover:decoration-2 hover:gap-1"
             >
               View Project
