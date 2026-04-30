@@ -21,7 +21,9 @@ const WorkHistorySection = () => {
         ))}
       </section>
       <Link
-        href={"/archive"}
+        href={"/Goodluck Reuben Resume.pdf"}
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex gap-1 text-sm underline decoration-2 justify-end mt-10  lg:hidden font-sans items-center"
       >
         <p className="font-medium">View Full Résumé</p>
