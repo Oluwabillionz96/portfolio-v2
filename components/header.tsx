@@ -7,6 +7,25 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const pathname = usePathname();
 
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    // Check if it's an internal hash link
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.replace("#", "");
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        elem.scrollIntoView({
+          behavior: "smooth",
+        });
+        // Update url without jumping
+        window.history.pushState(null, "", href);
+      }
+    }
+  };
+
   if (pathname !== "/") return null;
   return (
     <header className="md:flex hidden z-50 bg-white border-b font-space justify-between py-6 px-8 fixed w-full top-0 left-0 right-0">
@@ -15,6 +34,7 @@ const Header = () => {
           <li key={link.href}>
             <a
               href={link.href}
+              onClick={(e) => handleScroll(e, link.href)}
               className="uppercase text-black hover-fill-right py-2 px-3 hover:text-white text-sm font-bold"
             >
               {link.title}
