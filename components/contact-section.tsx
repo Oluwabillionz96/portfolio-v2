@@ -20,7 +20,7 @@ export const formSchema = z.object({
 });
 
 const ContactSection = () => {
-  const { control, handleSubmit } = useForm<z.infer<typeof formSchema>>({
+  const { control, handleSubmit, reset } = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       fullName: "",
       email: "",
@@ -29,8 +29,23 @@ const ContactSection = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    const json = JSON.stringify({
+      ...data,
+      access_key: "d03f1574-6ec2-4beb-9ce0-c1414a081005",
+    });
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    });
+    const result = await response.json();
+    if (result.success) {
+      reset();
+    }
   };
   return (
     <section
