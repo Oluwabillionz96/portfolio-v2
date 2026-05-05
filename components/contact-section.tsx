@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import ControlledInput from "./ui/controlled-input";
 import { Button } from "./ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 
 export const formSchema = z.object({
   fullName: z
@@ -19,8 +20,17 @@ export const formSchema = z.object({
     .max(300, "Message must be at most 300 characters."),
 });
 
+type Status = { type: "success" | "error"; message: string } | null;
+
 const ContactSection = () => {
-  const { control, handleSubmit, reset } = useForm<z.infer<typeof formSchema>>({
+  const [status, setStatus] = useState<Status>(null);
+
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { isSubmitting },
+  } = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       fullName: "",
       email: "",
@@ -30,22 +40,31 @@ const ContactSection = () => {
   });
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    const json = JSON.stringify({
-      ...data,
-      access_key: "d03f1574-6ec2-4beb-9ce0-c1414a081005",
-    });
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    });
-    const result = await response.json();
-    if (result.success) {
-      reset();
+    setStatus(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+      if (result.success) {
+        reset();
+        setStatus({
+          type: "success",
+          message: "Message sent successfully! I'll get back to you soon.",
+        });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (e) {
+      setStatus({
+        type: "error",
+        message: "Something went wrong. Please try again or email me directly.",
+      });
     }
+
+    // Auto-dismiss after 5 seconds
+    setTimeout(() => setStatus(null), 5000);
   };
   return (
     <section
@@ -100,10 +119,24 @@ const ContactSection = () => {
             />
             <Button
               type="submit"
-              className="lg:py-8 py-5 rounded-none font-medium lg:text-3xl text-xl font-space uppercase"
+              disabled={isSubmitting}
+              className="lg:py-8 py-5 rounded-none font-medium lg:text-3xl disabled:cursor-not-allowed disabled:opacity-50 text-xl font-space uppercase"
             >
-              Send Transmission
+              {isSubmitting ? "Sending..." : "Send Transmission"}
             </Button>
+
+            {/* Status feedback */}
+            {status && (
+              <div
+                className={`py-4 px-6 text-sm font-space font-bold uppercase tracking-wider border-2 transition-all duration-300 ${
+                  status.type === "success"
+                    ? "bg-black text-white border-black"
+                    : "bg-white text-red-600 border-red-600"
+                }`}
+              >
+                {status.message}
+              </div>
+            )}
           </FieldGroup>
         </form>
       </div>

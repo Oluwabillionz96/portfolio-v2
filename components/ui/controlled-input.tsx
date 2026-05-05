@@ -36,7 +36,7 @@ const ControlledInput = ({
               {...field}
               id={id}
               className={cn(
-                "lg:h-28 md:h-20 h-14 resize-none rounded-none border-0 border-b-2 font-medium lg:text-3xl md:text-xl text-lg focus:outline-none",
+                "lg:h-28 md:h-20 h-14 resize-none rounded-none border-0 border-b-2 font-medium lg:text-2xl md:text-lg text-base focus:outline-none",
                 fieldState.invalid ? "border-red-500" : "border-black",
               )}
             />
@@ -46,7 +46,7 @@ const ControlledInput = ({
               id={id}
               data-invalid={fieldState.invalid}
               className={cn(
-                "lg:h-14 md:h-10 h-8 rounded-none border-0 border-b-2 font-medium lg:text-3xl md:text-xl text-lg focus:outline-none",
+                "lg:h-14 md:h-10 h-8 rounded-none border-0 border-b-2 font-medium lg:text-2xl md:text-lg text-base focus:outline-none",
                 fieldState.invalid ? "border-red-500" : "border-black",
               )}
             />
