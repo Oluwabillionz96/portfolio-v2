@@ -41,14 +41,14 @@ const ProjectCard = ({
           <h3 className="text-3xl font-medium font-space uppercase">
             {projectName}
           </h3>
-          <p className="font-sans">{projectDescription}</p>
+          <p className="font-sans text-sm sm:text-base">{projectDescription}</p>
 
-          <div className="flex gap-2 lg:justify-end justify-center">
+          <div className="flex gap-2 text-xs md:text-sm whitespace-nowrap md:justify-end justify-center">
             <Link
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex justify-center py-2 md:justify-start bg-black text-white md:bg-transparent w-full md:text-black uppercase text-sm font-bold md:w-fit font-space items-center group transition-all duration-500 hover:underline hover:decoration-black hover:decoration-2 hover:gap-1"
+              className="flex justify-center py-2 md:justify-start bg-black text-white md:bg-transparent w-full md:text-black uppercase  font-bold md:w-fit font-space items-center group transition-all duration-500 hover:underline hover:decoration-black hover:decoration-2 hover:gap-1"
             >
               View Project
               <ArrowUpRight
@@ -58,9 +58,9 @@ const ProjectCard = ({
             </Link>
             <Link
               href={projectLink}
-              className="flex justify-center py-2 border border-black md:border-none md:justify-start uppercase text-sm font-bold w-full md:w-fit font-space items-center group transition-all duration-500 hover:underline hover:decoration-black hover:decoration-2 hover:gap-1"
+              className="flex justify-center py-2 border border-black md:border-none md:justify-start uppercase font-bold w-full md:w-fit font-space items-center group transition-all duration-500 hover:underline hover:decoration-black hover:decoration-2 hover:gap-1"
             >
-              Read Case Study
+              Case Study
               <ChevronRight
                 className="group-hover:translate-x-1 transition-all duration-300 ease-in-out"
                 size={20}
