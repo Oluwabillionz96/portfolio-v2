@@ -25,7 +25,7 @@ const ProjectCard = ({
     <article className="relative">
       <div
         className={cn(
-          "lg:p-16 h-160 lg:h-150 border bg-white overflow-hidden relative z-20 lg:z-0 lg:border-0 p-4 border-black space-y-8 lg:border-b-2",
+          "lg:p-16 h-150 lg:h-150 border bg-white overflow-hidden relative z-20 lg:z-0 lg:border-0 p-4 border-black space-y-8 lg:border-b-2",
           index % 2 === 0 ? "lg:border-r-2" : "lg:border-l-2",
         )}
       >
@@ -38,7 +38,7 @@ const ProjectCard = ({
           />
         </div>
         <section className="flex-col flex justify-evenly h-1/2 lg:h-1/3">
-          <h3 className="text-3xl font-medium font-space uppercase">
+          <h3 className="md:text-3xl text-2xl font-medium font-space uppercase">
             {projectName}
           </h3>
           <p className="font-sans text-sm sm:text-base">{projectDescription}</p>
@@ -69,7 +69,7 @@ const ProjectCard = ({
           </div>
         </section>
       </div>
-      <div className="border-black lg:hidden border-2 w-full h-160 absolute -top-4 -right-4" />
+      <div className="border-black lg:hidden border-2 w-full h-150 absolute -top-4 -right-4" />
     </article>
   );
 };

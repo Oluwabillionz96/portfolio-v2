@@ -85,7 +85,7 @@ const ContactSection = () => {
             href={"mailto:goodluckreuben96@gmail.com"}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium lg:text-3xl sm:text-xl text-lg font-space uppercase hover:underline decoration-2 decoration-black"
+            className="font-medium lg:text-lg  underline sm:text-base text-sm font-space uppercase hover:underline decoration-2 decoration-black"
           >
             goodluckreuben96@gmail.com
           </Link>
