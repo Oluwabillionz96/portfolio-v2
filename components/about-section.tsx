@@ -46,9 +46,9 @@ const AboutSection = () => {
             moment, and somehow uncover a bug you never considered.
           </p>
           <p>
-            That's why I pay close attention to edge cases. Building a feature
-            is one thing. Building a feature that survives user interactions is
-            another.
+            That&apos;s why I pay close attention to edge cases. Building a
+            feature is one thing. Building a feature that survives user
+            interactions is another.
           </p>
           <p>
             Finally, I believe in ownership.{" "}
