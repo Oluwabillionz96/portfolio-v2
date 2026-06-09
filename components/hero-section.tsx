@@ -16,11 +16,13 @@ const HeroSection = () => {
       </header>
       <section className="space-y-4">
         <p className="text-xs font-bold font-space text-primary uppercase tracking-widest">
-          Frontend Developer & Systems Architect
+          Frontend Engineer
         </p>
         <h2 className="text-3xl sm:text-5xl md:text-6xl w-full md:w-4/5 lg:w-3/5 font-bold font-space uppercase leading-tight">
-          Building technical solutions with mathematical precision and artistic
-          clarity.
+          Building products with a focus on{" "}
+          <strong className="text-gray-500">speed</strong>,{" "}
+          <strong className="text-gray-500">clarity</strong>, and{" "}
+          <strong className="text-gray-500">aesthetics</strong>
         </h2>
       </section>
     </section>

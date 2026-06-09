@@ -1,3 +1,4 @@
+import Link from "next/link";
 import StickyContainer from "./ui/sticky-container";
 
 const AboutSection = () => {
@@ -8,39 +9,50 @@ const AboutSection = () => {
     >
       <StickyContainer>
         <h2 className="uppercase text-xl sm:text-4xl lg:text-6xl font-bold font-space md:flex">
-          The Philosophy
+          My Approach
         </h2>
       </StickyContainer>
 
       <section>
         <div className="text-lg md:text-xl  font-sans leading-relaxed space-y-8">
           <p>
-            I build frontend systems that behave the way users expect them to,
-            especially under real conditions, not just in development.
+            My approach is shaped by simplicity and unpredictable user behavior.
           </p>
           <p>
-            I learned quickly that things rarely break in obvious ways. I ran
-            into an issue where authentication worked in development but failed
-            in production due to how cookies behave across subdomains. Fixing it
-            meant stepping back from the UI and rethinking the architecture,
-            eventually introducing a proxy layer to make the system consistent.
-            That experience shaped how I approach problems: don’t patch
-            symptoms, understand the system.
+            I believe software should be kept as simple as possible, free from
+            complexity that doesn&apos;t add value. Not every algorithm needs to
+            be clever, and not every screen needs animations, gradients, or
+            visual effects. Simplicity makes products easier to understand,
+            easier to use, and easier to maintain.
           </p>
           <p>
-            Since then, I’ve focused on building features that hold up in
-            practice, with attention to edge cases, error handling, and the
-            details that define user experience. I care about structure because
-            clear systems are easier to reason about and harder to break.
+            I learned this the hard way while building{" "}
+            <Link href="/project/photoverse" className="underline">
+              Photoverse
+            </Link>
+            . I overloaded the interface with animations and heavy assets, and
+            the product became noticeably slow and harder to use. On some
+            devices, the experience degraded further, and users often mentioned
+            slow startup and feeling overwhelmed on first load.
           </p>
           <p>
-            My approach is simple: keep things straightforward. Not everything
-            needs to be clever or over-engineered. The best solutions tend to be
-            the ones that work reliably without drawing attention to themselves.
+            That experience changed how I think about frontend work. Performance
+            and clarity are not separate from design; they are part of it.
+          </p>
+          <p>The second pillar is unpredictability.</p>
+          <p>
+            Users are unpredictable. They&apos;ll click the wrong thing, enter
+            unexpected data, lose connection, refresh at the worst possible
+            moment, and somehow uncover a bug you never considered.
           </p>
           <p>
-            I own features end-to-end and follow them through to completion. If
-            I say I’ll handle something, it gets done.
+            That's why I pay close attention to edge cases. Building a feature
+            is one thing. Building a feature that survives user interactions is
+            another.
+          </p>
+          <p>
+            Finally, I believe in ownership.{" "}
+            <strong>If I say I&apos;ll handle something, it gets done</strong>.
           </p>
         </div>
       </section>
